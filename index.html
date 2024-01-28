@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="about">
+            <img class="empty" src="img/portrait.jpg" alt="Profile Image"></div>
+            <article>
+                <div class="title">
+                    <h1>Ina Iontcheva</h1>
+                </div>
+                <div class="description">
+                    <p>Hi! 👋 I'm a content marketer based in Sofia. I have 6 years of content creation and marketing experience with attention to improving the user experience through blogging, video tutorials, podcasts, and knowledge base articles.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="services" class="service service-html sticky">
+            <article>
+                <figure>
+                    <img src="img/diamond.png" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>BLOGGING</h2>
+                    <p>The articles in this blog feature tutorials, news and repurposed video content transcribed and edited from live events and webinars. The blog also features client interviews from various industries including VFX, architecture, automotive and aviation. Their purpose is to serve as case studies, highlighting the product value as well as provide inspiration to readers on what they can achieve.</p>
+                    <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Read now</a>
+
+                    <p>I pitched a project proposal to the marketing team, emphasizing the benefits of creating a versatile tool to expand our company's content reach. The Ctrl+V podcast was launched to engage our online community, providing valuable tech trends and showcasing our solutions through guest expert interviews. A Blubrry plugin on WordPress for self-hosting.</p>
+                     <a href="http://inaiontcheva.github.io/audio/Ctrl+V%20-%20Episode%201%20Managing%20Vulnerabilities%20and%20Unlocking%20Opportunities%20in%20a%20Time%20of%20Crisis%20(1)%20(1).mp3" target="_blank">Listen now</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="service service-css sticky">
+            <article>
+                <figure>
+                    <img src="img/triangle.png" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>USER ASSISTANCE</h2>
+                    <p> Various forms of content to assist users in utilizing different SMS marketing and university prep tools effectively.</p>
+                    <a href="https://www.youtube.com/watch?v=z-eUOMbb7hE&feature=emb_title" target="_blank">Website navigation webinar</a>
+                    <p>The aim of this project was to familiarize graduate university applicants with the resources and tools available on the Prepadviser preparation platform through a pre-recorded webinar. The process involved planning UX flows, reviewing sections in hierarchical order, script writing, recording, and editing of the video.</p>
+                    <a href="https://www.youtube.com/watch?v=LLiI2L_pwHI&feature=emb_title" target="_blank">Video tutorial on SMS Marketing</a>
+                    <p>These tutorial videos were created to guide users step-by-step on using a text marketing app on Shopify. The process included testing software features, script writing, screen and voice recording, editing with Camtasia, and optimizing SEO for the YouTube channel.</p>
+                    <a href="https://smsbump.com/Text-marketing-campaigns-that-sell.pdf" target="_blank">E-book on text campaigns</a>
+                    <p>This gated content aimed to introduce eCommerce businesses new to SMS marketing to the advertising method through an e-book. It included technical tips and tricks, and simplified visual aids in the form of diagrams.</p>
+                     <a href="https://smsbump.com/knowledge-base" target="_blank">Knowledge base for Shopify app</a>
+                     <p>This project involved creating concise knowledge base articles for the SMSBump app. Images designed using Sketch were added to illustrate each required step.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="service service-js sticky">
+            <article>
+                <figure>
+                    <img src="img/octagon.png" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>GATED CONTENT & CASE STUDIES</h2>
+                    <p>This gated content aimed to attract leads and inform businesses about industry trends and guide them through an application takeover. The case studies serve to showcase how the company's services effectively helped customers overcome challenges and achieve success, enhancing brand credibility. All projects involved thorough research, collaboration with SMEs, and the creation of visuals that effectively communicate the brand. </p>
+                     <a href="http://inaiontcheva.github.io/docs/2020CybersecurityTrendsOnFocus.pdf" target="_blank">Cybersecurity Trends Brief</a>
+                     <p><a href="http://inaiontcheva.github.io/docs/AccGuide.pdf" target="_blank">Application Takeover Guide</a></p>
+                     <p><a href="http://inaiontcheva.github.io/docs/EnergyCaseStudy.pdf" target="_blank">Energy Supply Case Study</a></p>
+                     <p><a href="http://inaiontcheva.github.io/docs/ApigeeCaseStudy.pdf" target="_blank">Apigee Case Study</a></p>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="contact full-screen">
+            <a href="mailto:ina.iontcheva@gmail.com">inaiontcheva@gmail.com</a>
+        </section>
+
+        <script>
+
+            let emptyElement = document.querySelector('.about .empty');
+            let titleElement = document.querySelector('.about .title');
+
+            let figureElements = document.querySelectorAll('.service figure');
+
+
+            window.addEventListener( 'mousemove', handleMouseMove);
+
+            function handleMouseMove( event ) {
+
+                emptyElement.style.flexBasis = event.clientX + 'px';
+                titleElement.style.flexBasis = event.clientY / 2 + 'px';
+
+                figureElements.forEach( function( element ) {
+                    element.style.flexBasis = (window.innerWidth - event.clientX) + 'px';
+                } );
+            }
+
+        </script>
+
+    </body>
+</html>
